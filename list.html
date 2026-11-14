@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echo</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="images/favicon_cat.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class = "header__container">
+            <p class = "header__name">Ваши рецензии</p>
+            <button class = "create_btn" onclick="to_create()">❇️</button>
+        </div>
+    </header>
+    <label for="r_type"></label>
+    <select id="r_type" name="type">
+        <option value=""></option>
+    </select>
+    <div id="reviews-container"></div>
+
+    <script src="func.js"></script>
+</body>
+</html>

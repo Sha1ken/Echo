@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echo - Просмотр рецензии</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="images/favicon_cat.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <button class="back_btn" onclick="to_reviewlist()">⬅️</button>
+            <button class="change_btn" onclick="to_change()">📝</button>
+            <button class="delete_btn" onclick="deleteReview()">❌</button>
+            <p class="header__name">Ваша рецензия</p>
+        </div>
+    </header>
+
+    <div class="review-view-container">
+        <div class="review-left-col">
+            <div class="form-group">
+                <label>Название:</label>
+                <div id="name" class="readonly"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Тип:</label>
+                <div id="type" class="readonly"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Понравившиеся персонажи:</label>
+                <div id="fav_char" class="readonly">-</div>
+            </div>
+
+            <div class="form-group">
+                <label>Непонравившиеся персонажи:</label>
+                <div id="nonfav_char" class="readonly">-</div>
+            </div>
+
+            <div class="comment form-group">
+                <label>Комментарий:</label>
+                <div id="comment" class="readonly" style="min-height: 100px;">-</div>
+            </div>
+        </div>
+
+        <div class="review-right-col">
+            <div class="rating-item full-width">
+                <label>Общая оценка:</label>
+                <div class="slider-wrapper">
+                    <span>1</span>
+                    <input type="range" id="remark" class="readonly-range" min="1" max="10">
+                    <span>10</span>
+                </div>
+
+                <div class="rating-item">
+                    <label>Атмосфера:</label>
+                    <div class="slider-wrapper">
+                        <span>1</span>
+                        <input type="range" id="atmosphere" class="readonly-range" min="1" max="10">
+                        <span>10</span>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <label>Эмоции:</label>
+                    <div class="slider-wrapper">
+                        <span>1</span>
+                        <input type="range" id="emotions" class="readonly-range" min="1" max="10">
+                        <span>10</span>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <label>Идея:</label>
+                    <div class="slider-wrapper">
+                        <span>1</span>
+                        <input type="range" id="idea" class="readonly-range" min="1" max="10">
+                        <span>10</span>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <label>Реализация:</label>
+                    <div class="slider-wrapper">
+                        <span>1</span>
+                        <input type="range" id="realisation" class="readonly-range" min="1" max="10">
+                        <span>10</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="func.js"></script>
+</body>
+</html>

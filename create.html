@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echo - Новая рецензия</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="images/favicon_cat.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <button class="back_btn" onclick="to_reviewlist()">⬅️</button>
+            <p class="header__name">Новая рецензия</p>
+        </div>
+    </header>
+
+    <div class="review-view-container">
+        <div class="review-left-col">
+            <div class="form-group">
+                <label>Название:</label>
+                <input type="text" id="name" placeholder="Введите название просмотренного контента">
+            </div>
+
+            <div class="form-group">
+                <label>Тип:</label>
+                <select class="sel" id="r_type" name="type">
+                    <option value="">----</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Понравившиеся персонажи:</label>
+                <input type="text" id="fav_char" placeholder="Укажите понравившихся персонажей">
+            </div>
+
+            <div class="form-group">
+                <label>Непонравившиеся персонажи:</label>
+                <input type="text" id="nonfav_char" placeholder="Укажите непонравившихся персонажей">
+            </div>
+
+            <div class="comment form-group">
+                <label>Комментарий:</label>
+                <textarea id="comment" name="comment" placeholder="Здесь вы можете свободно прокомментировать просмотренный контент"
+                    rows="14"></textarea>
+            </div>
+        </div>
+
+        <div class="review-right-col">
+            <div class="rating-item full-width">
+                <label>Общая оценка:</label>
+                <div class="slider-wrapper">
+                    <span>1</span>
+                    <input type="range" step="1" min="1" max="10" value="5" id="remark" name="remark"/>
+                    <span>10</span>
+                </div>
+
+                <div class="rating-item">
+                    <label>Атмосфера:</label>
+                    <div class="slider-wrapper">
+                        <span>1</span>
+                        <input type="range" step="1" min="1" max="10" value="5" id="atmosphere" name="atmosphere"/>
+                        <span>10</span>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <label>Эмоции:</label>
+                    <div class="slider-wrapper">
+                        <span>1</span>
+                        <input type="range" step="1" min="1" max="10" value="5" id="emotions" name="emotions"/>
+                        <span>10</span>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <label>Идея:</label>
+                    <div class="slider-wrapper">
+                        <span>1</span>
+                        <input type="range" step="1" min="1" max="10" value="5" id="idea" name="idea"/>
+                        <span>10</span>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <label>Реализация:</label>
+                    <div class="slider-wrapper">
+                        <span>1</span>
+                        <input type="range" step="1" min="1" max="10" value="5" id="realisation" name="realisation"/>
+                        <span>10</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<button class="done_btn" onclick="create_review()">Готово</button>
+    <script src="func.js"></script>
+</body>
+</html>
